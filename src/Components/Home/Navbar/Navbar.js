@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import img from './../../../Images/uniquenav.png'
 
 const Navbar = () => {
     return (
@@ -8,8 +9,7 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg navbar-light bg-light ">
           <div className="container-fluid container">
             <Link className="navbar-brand" to="/home">
-              {" "}
-              Unique{" "}
+              <img src={img} alt="" />
             </Link>
             <button
               className="navbar-toggler"

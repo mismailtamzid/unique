@@ -13,10 +13,12 @@ import Shop from './Components/Shop/Shop';
 import Blog from './Components/Blog/Blog';
 import Home from './Components/Home/Home';
 import Navbar from './Components/Home/Navbar/Navbar';
+import AppBar from './Components/Home/AppBar/AppBar';
 
 function App() {
   return (
     <BrowserRouter >
+      <AppBar/>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
