@@ -1,4 +1,5 @@
 import React from "react";
+import "./Appbar.css"
 
 const AppBar = () => {
   return (
@@ -21,40 +22,35 @@ const AppBar = () => {
               class="collapse navbar-collapse container"
               id="navbarTogglerDemo01"
             >
-              <a class="navbar-brand  text-light" href="blank"></a>
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">
-                    <i class="fab fa-facebook"></i>
+                  <a class="nav-link active" aria-current="page" href="blank">
+                    <i class="fab fa-facebook fa-lg"></i>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">
-                    <i class="fab fa-google"></i>
+                  <a class="nav-link active" aria-current="page" href="blank">
+                    <i class="fab fa-google fa-lg"></i>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">
-                    <i class="fab fa-twitter"></i>
+                  <a class="nav-link active" aria-current="page" href="blank">
+                    <i class="fab fa-twitter fa-lg"></i>
                   </a>
                 </li>
               </ul>
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="blank">
-                    <i class="fas fa-map-marker-alt"></i> Halishahar, Ctg, BD
-                  </a>
+                <li class="nav-item rightnav">
+                  <i class="fas fa-map-marker-alt fa-lg"></i> Halishahar, Ctg,
+                  BD
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="blank">
-                    <i class="fas fa-phone"></i>
-                    +8801518455215
-                  </a>
+                <li class="nav-item rightnav">
+                  <i class="fas fa-phone fa-lg"></i>
+                  +8801518455215
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="blank">
-                    <i class="fas fa-envelope"></i> mismailtamzid@gmail.com
-                  </a>
+                <li class="nav-item rightnav">
+                  <i class="fas fa-envelope fa-lg"></i>
+                  mismailtamzid@gmail.com
                 </li>
               </ul>
             </div>

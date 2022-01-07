@@ -1,11 +1,12 @@
 .bannerSize{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-image: url("./../../../Images/uniquebg.jpg");
-    background-position: cover;
+    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     color: aliceblue;
+    
 }

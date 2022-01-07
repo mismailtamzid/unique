@@ -1,0 +1,10 @@
+.nav-item a, i{
+   color: aliceblue;
+   margin-right: 2px;
+}
+a>i:hover{
+    color: rgba(127, 173, 131, 0.931);
+}
+.rightnav{
+    padding-left: 63px;
+}
