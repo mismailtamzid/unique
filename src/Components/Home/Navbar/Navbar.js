@@ -23,40 +23,47 @@ const Navbar = () => {
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse " id="navbarNav">
-              <ul className="navbar-nav ms-auto">
+              <ul className="navbar-nav ms-auto d-flex align-items-center justify-content-center">
                 <li className="nav-item ">
                   <Link className="nav-link active" aria-current="page" to="/">
-                    Home
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/shop">
-                    Shop
+                    HOME
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/product">
-                    Product
+                    PRODUCT
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/sale">
-                    Sale
+                  <Link className="nav-link" to="/about">
+                    ABOUT US
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/portfolio">
-                    Portfolio
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to="/lookbook">
-                    Lookbook
+                  <Link className="nav-link" to="/contact">
+                    CONTACT US
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/blog">
-                    Blog
+                    BLOGS
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/dashboard">
+                    DashBoard
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    className="nav-link d-flex align-items-center ps-4"
+                    to="/login"
+                  >
+                    <i
+                      style={{ color: "green" }}
+                      className="fas fa-user  fa-2x me-2"
+                    ></i>{" "}
+                    LOGIN
                   </Link>
                 </li>
               </ul>

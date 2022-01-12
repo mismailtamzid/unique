@@ -1,9 +1,9 @@
 import React from 'react';
-import Navbar from '../Navbar/Navbar';
 import Banner from '../Homepage/Banner/Banner';
 import About from './About/About';
 import AwardSection from './AwardSection/AwardSection';
 import Services from './Services/Services';
+import Review from "./Review/Review";
 
 const Home = () => {
     return (
@@ -11,7 +11,8 @@ const Home = () => {
             <Banner />
             <About />
             <AwardSection />
-            <Services/>
+            <Services />
+            <Review/>
         </div>
     );
 };

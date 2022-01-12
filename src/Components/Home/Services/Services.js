@@ -25,7 +25,7 @@ const Services = () => {
             </div>
             <div className="col-md-5 d-flex justify-content-center align-items-center bg-dark rounded p-5 bg-opacity-0 ms-5">
               <div>
-                <i class="fas fa-shower fa-4x bg-success p-2 rounded"></i>
+                <i class="fas fa-seedling fa-4x bg-success p-2 rounded"></i>
               </div>
               <div className="text-light">
                 <h3>Design & Renovation</h3>
@@ -39,7 +39,7 @@ const Services = () => {
           <div className="row mt-5">
             <div className="col-md-5 d-flex justify-content-center align-items-center bg-dark rounded p-5 bg-opacity-0 me-5">
               <div>
-                <i class="fas fa-shower fa-4x bg-success p-2 rounded"></i>
+                <i class="fas fa-cut fa-4x bg-success p-2 rounded"></i>
               </div>
               <div className="text-light">
                 <h3>Planting & Removal</h3>
