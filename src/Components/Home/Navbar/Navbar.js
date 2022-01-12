@@ -1,9 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import img from './../../../Images/uniquenav.png'
+import useFirebase from '../../Hook/useFirebase';
+import img from './../../../Images/uniquenav.png';
 
 const Navbar = () => {
+  const { user } = useFirebase();
+  const { logOut } = useFirebase();
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light ">
@@ -49,9 +52,53 @@ const Navbar = () => {
                     BLOGS
                   </Link>
                 </li>
-                <li className="nav-item">
+                {user.email && (
+                  <li className="nav-item ">
+                    <Link to="/mywishlists" className="nav-link">
+                      My Wishlist
+                    </Link>
+                  </li>
+                )}
+                {user.email && (
+                  <li className="nav-item ">
+                    <Link to="/dashboard" className="nav-link">
+                      Dashboard
+                    </Link>
+                  </li>
+                )}
+                <li className="user">
+                  {user?.photoURL ? (
+                    <img className="px-2  user" src={user.photoURL} alt="" />
+                  ) : (
+                    <img
+                      className="px-2 "
+                      style={{ width: "50px" }}
+                      src="https://i.ibb.co/5r8HpR3/user-1.png"
+                      alt="abc"
+                    />
+                  )}
+                </li>
+                {user.displayName && (
+                  <li className=" user-name"> {user?.displayName} </li>
+                )}
+
+                {user.email ? (
+                  <li className="nav-item dashbord">
+                    <button className="nav-link btn btn-success" onClick={logOut}>
+                      Logout
+                    </button>
+                  </li>
+                ) : (
+                  <li className="nav-item  ">
+                    <Link to="/login" className="nav-link sign-in">
+                      Sign In
+                    </Link>
+                  </li>
+                )}
+
+                {/* <li className="nav-item">
                   <Link className="nav-link" to="/dashboard">
-                    DashBoard
+                    DASHBOARD
                   </Link>
                 </li>
                 <li className="nav-item">
@@ -65,7 +112,7 @@ const Navbar = () => {
                     ></i>{" "}
                     LOGIN
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

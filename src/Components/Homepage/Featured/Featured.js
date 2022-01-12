@@ -1,48 +1,42 @@
 import React, { useEffect, useState } from "react";
+import { Button, Card, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Featured.css";
+
+// .slice(0, 8)?.map((pd, index) => (
 const Featured = () => {
-  const [services, setServices] = useState([]);
+   const [elements, setElements] = useState([]);
   useEffect(() => {
-    fetch("https://young-shore-30046.herokuapp.com/products")
+    fetch("http://localhost:5000/products")
       .then((res) => res.json())
-      .then((data) => setServices(data));
+      .then((data) => setElements(data));
   }, []);
   return (
-    <div className="Feature">
-      <div className="services">
-        <h1>Best Selling </h1>
-        <div className="row container">
-          {services.slice(0, 8)?.map((pd, index) => (
-            <div className="col-md-12 col-lg-3 mt-2">
-              <div className="service p-3 border mt-5 me-4  products-card">
-                <div className="service-img-container">
-                  <img
-                    className="w-100 image"
-                    src={`data:image/png;base64,${pd.image}`}
-                    alt=""
-                  />
-                  <div className="overlay">
-                    <div className="text">
-                      <div className="Product-view-btn">
-                        <Link to={`/product/${pd._id}`}>View</Link>
-                      </div>
-                      <div className="Product-buy-btn">
-                        <Link to={`/buyProducts/${pd._id}`}>Buy Now</Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <Link to={`/product/${pd._id}`}>
-                  {" "}
-                  <h5 className="mt-4">{pd.title}</h5>
-                </Link>
-                <p className="product-price">Price: {pd.price}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+    <div className="container text-center mt-5">
+      <h1 className="text-success">Best popular</h1>
+
+      <Row xs={1} md={3} className="g-4">
+        {elements.slice(0, 6)?.map((element) => (
+          <div>
+            <Col>
+              <Card className="imageHover">
+                <Card.Img
+                  className="imageHover"
+                  variant="top"
+                  src={element.img}
+                />
+                <Card.Body>
+                  <Card.Title>{element.title}</Card.Title>
+                  <Card.Text>Price: ${element.price}</Card.Text>
+                  <Link to={`/product/${element._id}`}>
+                    <Button variant="success">VIEW MORE</Button>
+                  </Link>
+                </Card.Body>
+              </Card>
+            </Col>
+          </div>
+        ))}
+      </Row>
     </div>
   );
 };

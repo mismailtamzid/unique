@@ -1,7 +1,7 @@
 .Award {
   color: aliceblue;
   background-image: url("./../../../Images//uniqueAward.jpg");
-  height: 50vh; 
+  height: 80vh; 
   background-attachment: fixed;
   background-size: cover;
 }

@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import useAuth from "../../Hook/useAuth";
-import Footer from "../../Shared/Footer/Footer";
-import Header from "../../Shared/Header/Header";
+import useFirebase from "../Hook/useFirebase";
 import Spinner from "../Spinner/Spinner";
 import MyWishlist from "./MyWishlist/MyWishlist";
 
 const MyWishlists = () => {
-  const { user } = useAuth();
+  const { user } = useFirebase();
   const [Wishlists, setWishlists] = useState([]);
   const [isloading, setIsLoading] = useState(true);
   useEffect(() => {
-    const url = `https://young-shore-30046.herokuapp.com/wishlist/${user.email}`;
+    const url = `http://localhost:5000/wishlist/${user.email}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setWishlists(data))
@@ -22,7 +20,6 @@ const MyWishlists = () => {
   } else {
     return (
       <>
-        <Header />
         <div className="myorder">
           <h1 className="heading" style={{ backgroundColor: "#FCF6F6" }}>
             My Wishlist
@@ -56,7 +53,6 @@ const MyWishlists = () => {
             )}
           </div>
         </div>
-        <Footer />
       </>
     );
   }

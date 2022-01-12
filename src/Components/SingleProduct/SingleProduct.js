@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const SingleProduct = () => {
     const { id } = useParams();
     const [singleProduct, setSingleProduct] = useState([]);
 
       useEffect(() => {
-        fetch(`http://localhost:5000/products/${_id}`)
+        fetch(`http://localhost:5000/products/${id}`)
           .then((res) => res.json())
           .then((data) => setSingleProduct(data));
       }, [id]);
@@ -28,6 +28,9 @@ const SingleProduct = () => {
                 <h5 class="card-title">{singleProduct.title}</h5>
                 <p class="card-text">{singleProduct.description}</p>
                 <p class="card-text">{singleProduct.price}</p>
+                <Link to={`/buyProducts/${id}`}>
+                  <button className="buy-now-btn btn btn-success">BUY</button>
+                </Link>
               </div>
             </div>
           </div>

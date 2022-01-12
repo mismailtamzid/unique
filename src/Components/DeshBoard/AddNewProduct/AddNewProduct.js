@@ -15,7 +15,7 @@ const AddNewProduct = () => {
     formData.append("image", image);
     console.log(data);
 
-    fetch("https://young-shore-30046.herokuapp.com/products", {
+    fetch("http://localhost:5000/products", {
       method: "POST",
       body: formData,
     })
@@ -36,7 +36,7 @@ const AddNewProduct = () => {
           className="row  addproduct-from"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <p className="product-details">Product Deatils</p>
+          <p className="product-details">Product Details</p>
           <div className="col-md-12">
             <label className="form-label">Product Title</label>
             <input
@@ -62,32 +62,11 @@ const AddNewProduct = () => {
             />
           </div>
           <div className="col-md-12">
-            <label className="form-label">Products Fetures </label>
+            <label className="form-label">Products description </label>
             <input
               type="text"
               className="form-control"
-              {...register("desc1", { required: true })}
-            />
-          </div>
-          <div className="col-md-12">
-            <input
-              type="text"
-              className="form-control"
-              {...register("desc2")}
-            />
-          </div>
-          <div className="col-md-12">
-            <input
-              type="text"
-              className="form-control"
-              {...register("desc3")}
-            />
-          </div>
-          <div className="col-md-12">
-            <input
-              type="text"
-              className="form-control"
-              {...register("desc4")}
+              {...register("description", { required: true })}
             />
           </div>
           <div className="col-md-12">

@@ -4,6 +4,7 @@ import About from './About/About';
 import AwardSection from './AwardSection/AwardSection';
 import Services from './Services/Services';
 import Review from "./Review/Review";
+import Featured from '../Homepage/Featured/Featured';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             <Banner />
             <About />
             <AwardSection />
+            <Featured/>
             <Services />
             <Review/>
         </div>

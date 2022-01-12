@@ -14,7 +14,7 @@ const SingleOrder = ({ order }) => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        const url = `https://young-shore-30046.herokuapp.com/orders/${id}`;
+        const url = `http://localhost:5000/orders/${id}`;
         fetch(url, {
           method: "DELETE",
         })
@@ -33,7 +33,7 @@ const SingleOrder = ({ order }) => {
     const update = {
       status: "Shipped",
     };
-    const url = `https://young-shore-30046.herokuapp.com/orders/${id}`;
+    const url = `http://localhost:5000/orders/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

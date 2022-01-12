@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Button, Card, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
+
 const Product = () => {
   const [elements, setElements] = useState([]);
   useEffect(() => {

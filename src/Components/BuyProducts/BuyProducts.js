@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
 import useAuth from "../Hook/useAuth";
-
-
 import "./BuyProducts.css";
+
+
 
 const BuyProducts = () => {
   const { productId } = useParams();
@@ -12,7 +12,7 @@ const BuyProducts = () => {
   const [booking, setBooking] = useState([]);
   const { user } = useAuth();
   useEffect(() => {
-    fetch(`https://young-shore-30046.herokuapp.com/products/${productId}`)
+    fetch(`http://localhost:5000/products/${productId}`)
       .then((res) => res.json())
       .then((data) => setBooking(data));
   }, [productId]);
@@ -27,7 +27,7 @@ const BuyProducts = () => {
     data.user_email = user.email;
     data.status = update;
     data.booking_deatils = booking;
-    fetch("https://young-shore-30046.herokuapp.com/orders", {
+    fetch("http://localhost:5000/orders", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

@@ -27,7 +27,7 @@ import useAuth from "../Hook/useAuth";
 import "./DeshBoard.css";
 
 const Deshboard = () => {
-  const { user } = useAuth();
+  const user = {name: "tamzid", email: "mismailtamzid@gmail.com"};
   const admin = true;
   return (
     <Row className="me-0 px-0">
